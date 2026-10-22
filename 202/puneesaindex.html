@@ -1,1 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>เขื่อนรัชชประภา (เขื่อนเชี่ยวหลาน) | เว็บไซต์เพื่อการศึกษา</title>
+<meta name="description" content="เว็บไซต์ให้ความรู้เกี่ยวกับเขื่อนรัชชประภา หรือ เขื่อนเชี่ยวหลาน จังหวัดสุราษฎร์ธานี ประวัติ ความเป็นมา ข้อมูลทางเทคนิค การท่องเที่ยว และแผนที่">
 
+<!-- Bootstrap 5 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<!-- ฟอนต์ไทย -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Kanit:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===================================================
+   ธีมสี : เขียวอ่างเก็บน้ำ + กรมท่า  (แก้สีได้ตรงนี้)
+   =================================================== */
+:root{
+  --navy:#0f3d5c;
+  --navy-dark:#0a2c43;
+  --teal:#12796b;
+  --teal-light:#e8f3f0;
+  --sand:#f6f4ef;
+  --line:#d8dfe3;
+  --txt:#22333b;
+}
+*{scroll-behavior:smooth}
+body{
+  font-family:'Sarabun',Tahoma,sans-serif;
+  color:var(--txt);
+  background:#fff;
+  font-size:16px;
+  line-height:1.75;
+}
+h1,h2,h3,h4,.navbar-brand,.display-6{font-family:'Kanit','Sarabun',sans-serif}
+a{text-decoration:none}
+
+/* ---------- แถบประกาศบนสุด ---------- */
+.topbar{background:var(--navy-dark);color:#cfe3ec;font-size:.82rem;padding:5px 0}
+.topbar a{color:#cfe3ec}
+.topbar .marquee{overflow:hidden;white-space:nowrap}
+.topbar .marquee span{display:inline-block;animation:slide 22s linear infinite;padding-left:100%}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+
+/* ---------- ส่วนหัวเว็บ ---------- */
+.site-header{background:linear-gradient(180deg,#ffffff 0%,#f2f7f9 100%);border-bottom:3px solid var(--teal);padding:14px 0}
+.site-header .logo-box{
+  width:66px;height:66px;flex:0 0 66px;border-radius:50%;
+  background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-family:'Kanit';font-size:1.4rem;letter-spacing:1px;border:3px solid #cfe0e6;
+}
+.site-header .site-title{font-size:1.5rem;font-weight:600;color:var(--navy);line-height:1.25;margin:0}
+.site-header .site-sub{font-size:.86rem;color:#5d727c;margin:0}
+.search-box{max-width:280px}
+.search-box input{font-size:.9rem}
+.search-result{
+  position:absolute;z-index:1050;background:#fff;border:1px solid var(--line);
+  border-radius:6px;width:280px;max-height:230px;overflow:auto;display:none;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+.search-result a{display:block;padding:7px 12px;font-size:.88rem;color:var(--txt);border-bottom:1px solid #f0f2f3}
+.search-result a:hover{background:var(--teal-light)}
+
+/* ---------- เมนู ---------- */
+.main-nav{background:var(--navy);border:0;padding:0}
+.main-nav .navbar-nav .nav-link{
+  color:#e6f0f4;font-size:.95rem;padding:.75rem 1rem;border-bottom:3px solid transparent;
+}
+.main-nav .navbar-nav .nav-link:hover{background:rgba(255,255,255,.08)}
+.main-nav .navbar-nav .nav-link.active{
+  color:#fff;background:var(--teal);border-bottom-color:#f0c14b;font-weight:600;
+}
+.main-nav .dropdown-menu{border-radius:0;border:0;box-shadow:0 8px 20px rgba(0,0,0,.15);font-size:.92rem}
+.main-nav .navbar-toggler{border-color:#8fb3c2;color:#fff;margin:6px 12px}
+
+/* ---------- โครงหน้า ---------- */
+main{min-height:60vh}
+.hero{position:relative;background:#0b3b56}
+.hero img{width:100%;height:min(58vh,460px);object-fit:cover;opacity:.62}
+.hero .hero-text{
+  position:absolute;inset:auto 0 0 0;padding:28px 0 26px;
+  background:linear-gradient(0deg,rgba(4,28,42,.85),rgba(4,28,42,0));
+  color:#fff;
+}
+.hero .hero-text h2{font-size:1.9rem;margin-bottom:6px}
+.hero .hero-text p{margin:0;color:#dbebf2;font-size:.98rem}
+.breadcrumb-bar{background:var(--sand);border-bottom:1px solid var(--line);font-size:.85rem;padding:8px 0}
+.breadcrumb-bar a{color:var(--teal)}
+
+.section{padding:34px 0}
+.section-title{
+  font-size:1.35rem;font-weight:600;color:var(--navy);border-left:6px solid var(--teal);
+  padding-left:12px;margin-bottom:18px;
+}
+.lead-th{font-size:1rem;color:#3c4d56}
+.card{border:1px solid var(--line);border-radius:8px}
+.card-header{background:var(--teal-light);border-bottom:1px solid #cfe0dc;font-weight:600;color:#0f5a50}
+.info-box{background:var(--sand);border:1px solid var(--line);border-left:5px solid #f0c14b;padding:14px 16px;border-radius:6px}
+.table thead th{background:var(--navy);color:#fff;font-weight:600;font-size:.92rem;border-color:var(--navy)}
+.table td,.table th{vertical-align:middle;font-size:.94rem}
+.timeline-year{
+  display:inline-block;background:var(--teal);color:#fff;font-family:'Kanit';
+  padding:2px 12px;border-radius:20px;font-size:.9rem;margin-bottom:6px;
+}
+.stat-box{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px;text-align:center;height:100%}
+.stat-box .num{font-family:'Kanit';font-size:1.8rem;color:var(--teal);line-height:1}
+.stat-box .unit{font-size:.8rem;color:#7a8a92}
+.news-list li{padding:9px 0;border-bottom:1px dashed var(--line);font-size:.93rem}
+.news-list .date{color:var(--teal);font-weight:600;margin-right:6px}
+.thumb{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#eef3f4}
+.thumb img{width:100%;height:190px;object-fit:cover;transition:.3s}
+.thumb:hover img{transform:scale(1.04)}
+.thumb figcaption{font-size:.85rem;padding:8px 10px;background:#fff;color:#4d6068}
+#map{height:520px;width:100%;border:1px solid var(--line);border-radius:8px;z-index:1;background:#e9eef1}
+#map .map-fallback{height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:#71838c;font-size:.9rem}
+/* ปรับป้ายชื่อใน Google Maps ให้อ่านภาษาไทยชัดขึ้น */
+.gm-style{-webkit-font-smoothing:antialiased}
+.gm-style .gm-style-iw-c{border-radius:8px}
+.pin-list .list-group-item{cursor:pointer;font-size:.9rem}
+.pin-list .list-group-item:hover{background:var(--teal-light)}
+.legend{font-size:.84rem;color:#4d6068}
+.gallery-item{cursor:pointer}
+footer{background:var(--navy-dark);color:#c6d8e0;font-size:.9rem;padding-top:30px;margin-top:30px}
+footer h5{color:#fff;font-size:1rem;font-family:'Kanit';margin-bottom:12px;border-bottom:1px solid #2b556e;padding-bottom:8px}
+footer a{color:#c6d8e0}
+footer a:hover{color:#fff;text-decoration:underline}
+.sitemap-links a{display:block;padding:3px 0;font-size:.88rem}
+.footer-bottom{border-top:1px solid #24506a;margin-top:24px;padding:12px 0;font-size:.82rem;color:#9db9c7}
+#toTop{
+  position:fixed;right:18px;bottom:18px;display:none;z-index:999;border-radius:50%;
+  width:44px;height:44px;line-height:1;font-size:1.1rem;
+}
+.credit-table td:first-child{width:34%;background:var(--sand);font-weight:600;color:#33474f}
+.badge-soft{background:var(--teal-light);color:#0f5a50;font-weight:600}
+@media(max-width:767px){
+  .site-header .site-title{font-size:1.15rem}
+  .hero .hero-text h2{font-size:1.35rem}
+  #map{height:380px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ แถบประกาศ ============ -->
+<div class="topbar">
+  <div class="container d-flex align-items-center gap-3">
+    <span class="d-none d-md-inline"><i class="bi bi-megaphone-fill"></i></span>
+    <div class="marquee flex-grow-1"><span>ยินดีต้อนรับเข้าสู่เว็บไซต์ข้อมูลเขื่อนรัชชประภา (เขื่อนเชี่ยวหลาน) — เว็บไซต์นี้จัดทำขึ้นเพื่อประกอบการเรียนการสอน ข้อมูลโปรดตรวจสอบกับหน่วยงานต้นทางก่อนนำไปใช้</span></div>
+    <span class="d-none d-lg-inline"><i class="bi bi-calendar3"></i> อัพเดตล่าสุด: ตุลาคม 2569</span>
+  </div>
+</div>
+
+<!-- ============ ส่วนหัว ============ -->
+<header class="site-header">
+  <div class="container d-flex align-items-center justify-content-between flex-wrap gap-3">
+    <div class="d-flex align-items-center gap-3">
+      <div class="logo-box">PM</div>
+      <div>
+        <h1 class="site-title">เขื่อนรัชชประภา <span class="d-none d-sm-inline">(เขื่อนเชี่ยวหลาน)</span></h1>
+        <p class="site-sub">ตำบลเขาพัง อำเภอบ้านตาขุน จังหวัดสุราษฎร์ธานี  การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย</p>
+      </div>
+    </div>
+    <div class="position-relative">
+      <div class="input-group search-box">
+        <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+        <input type="text" id="searchInput" class="form-control" placeholder="ค้นหาในเว็บไซต์..." autocomplete="off">
+      </div>
+      <div class="search-result" id="searchResult"></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ เมนูหลัก ============ -->
+<nav class="navbar navbar-expand-lg navbar-dark main-nav sticky-top">
+  <div class="container">
+    <span class="navbar-brand d-lg-none py-2">เมนูหลัก</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainMenu">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" data-page="home" href="#/home"><i class="bi bi-house-door"></i> หน้าแรก</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-info-circle"></i> ข้อมูลเขื่อน</a>
+          <ul class="dropdown-menu">
+            <li><a class="nav-link-link dropdown-item" data-page="history" href="#/history">ประวัติความเป็นมา</a></li>
+            <li><a class="nav-link-link dropdown-item" data-page="specs" href="#/specs">ข้อมูลทางเทคนิค</a></li>
+            <li><a class="nav-link-link dropdown-item" data-page="benefits" href="#/benefits">ประโยชน์และการใช้งาน</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" data-page="tourism" href="#/tourism"><i class="bi bi-tree"></i> การท่องเที่ยว</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="map" href="#/map"><i class="bi bi-geo-alt"></i> แผนที่</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="gallery" href="#/gallery"><i class="bi bi-images"></i> รูปภาพ</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="references" href="#/references"><i class="bi bi-journal-text"></i> อ้างอิง</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="credits" href="#/credits"><i class="bi bi-people"></i> ผู้จัดทำ</a></li>
+      </ul>
+      <span class="navbar-text text-white-50 small d-none d-xl-inline">
+        <i class="bi bi-eye"></i> ผู้เข้าชม: <span id="visitCount">0</span> ครั้ง
+      </span>
+    </div>
+  </div>
+</nav>
+
+<main>
+<div class="container py-2">
+  <nav aria-label="breadcrumb" class="breadcrumb-bar rounded px-3">
+    <ol class="breadcrumb mb-0" id="breadcrumb">
+      <li class="breadcrumb-item"><a href="#/home">หน้าแรก</a></li>
+      <li class="breadcrumb-item active" id="crumbNow">ภาพรวม</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- ============================================================
+     หน้า 1 : หน้าแรก
+     ============================================================ -->
+<section class="page" id="home">
+  <div class="hero">
+    <img src="img/Activity_2.jpg" data-fb="ภาพสันเขื่อนรัชชประภา" alt="สันเขื่อนรัชชประภา">
+    <div class="hero-text">
+      <div class="container">
+        <h2>อ่างเก็บน้ำที่งดงามที่สุดแห่งหนึ่งของภาคใต้</h2>
+        <p>ทิวเขาหินปูนกลางผืนน้ำสีมรกต บนพื้นที่กว่า 185 ตารางกิโลเมตร ภายในอุทยานแห่งชาติเขาสก</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <h3 class="section-title">บทนำ</h3>
+        <p class="lead-th">
+          <strong>เขื่อนรัชชประภา</strong> หรือที่รู้จักกันในชื่อเดิมว่า <strong>เขื่อนเชี่ยวหลาน</strong>
+          เป็นเขื่อนอเนกประสงค์แห่งที่สองของภาคใต้ และเป็นเขื่อนหินแกนดินเหนียว (Rock-fill Dam with Clay Core)
+          สร้างขึ้นโดยปิดกั้นลำน้ำคลองแสง บริเวณบ้านเชี่ยวหลาน หมู่ที่ 3 ตำบลเขาพัง อำเภอบ้านตาขุน
+          จังหวัดสุราษฎร์ธานี อยู่ในเขตพื้นที่อุทยานแห่งชาติเขาสก ห่างจากตัวเมืองสุราษฎร์ธานีประมาณ 90 กิโลเมตร
+        </p>
+        <p class="lead-th">
+          ด้วยทัศนียภาพของเทือกเขาหินปูนที่โผล่พ้นผืนน้ำสีเขียวมรกต ทำให้บริเวณนี้ได้รับฉายาว่า
+          <em>“กุ้ยหลินเมืองไทย”</em> และเป็นแหล่งท่องเที่ยวทางธรรมชาติที่สำคัญที่สุดแห่งหนึ่งของจังหวัดสุราษฎร์ธานี
+        </p>
+
+        <div class="row g-3 mt-2">
+          <div class="col-6 col-md-3">
+            <div class="stat-box">
+              <div class="num" data-count="94">0</div>
+              <div class="unit">ความสูงเขื่อน (เมตร)</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-box">
+              <div class="num" data-count="240">0</div>
+              <div class="unit">กำลังผลิตไฟฟ้า (เมกะวัตต์)</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-box">
+              <div class="num" data-count="5639">0</div>
+              <div class="unit">ความจุอ่าง (ล้าน ลบ.ม.)</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-box">
+              <div class="num" data-count="185">0</div>
+              <div class="unit">พื้นที่ผิวน้ำ (ตร.กม.)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card mb-3">
+          <div class="card-header"><i class="bi bi-newspaper"></i> ข่าว / ประกาศ</div>
+          <div class="card-body pt-1">
+            <ul class="list-unstyled news-list mb-0">
+              <li><span class="date">22 ก.ย.</span> ครบรอบวันเสด็จพระราชดำเนินเปิดเขื่อนรัชชประภา</li>
+              <li><span class="date">ต.ค.</span> ฤดูฝน ควรตรวจสอบสภาพอากาศก่อนล่องเรือในอ่างเก็บน้ำ</li>
+              <li><span class="date">หมายเหตุ</span> การเข้าพักแพและกิจกรรมทางน้ำ ควรจองผ่านผู้ให้บริการที่ได้รับอนุญาต</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><i class="bi bi-link-45deg"></i> ทางลัด</div>
+          <div class="list-group list-group-flush">
+            <a href="#/history" class="list-group-item list-group-item-action" data-page="history">ประวัติความเป็นมา</a>
+            <a href="#/specs" class="list-group-item list-group-item-action" data-page="specs">ข้อมูลทางเทคนิคของเขื่อน</a>
+            <a href="#/tourism" class="list-group-item list-group-item-action" data-page="tourism">กิจกรรมท่องเที่ยวและที่พัก</a>
+            <a href="#/map" class="list-group-item list-group-item-action" data-page="map">แผนที่และจุดปักหมุด</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     หน้า 2 : ประวัติความเป็นมา
+     ============================================================ -->
+<section class="page d-none" id="history">
+  <div class="container section">
+    <h3 class="section-title">ประวัติความเป็นมา</h3>
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="mb-4">
+          <span class="timeline-year">พ.ศ. 2522 – 2525</span>
+          <h5>การศึกษาและเตรียมการก่อสร้าง</h5>
+          <p class="lead-th mb-0">
+            หน่วยงานด้านไฟฟ้าของประเทศได้ศึกษาศักยภาพของลุ่มน้ำคลองแสง ซึ่งเป็นสาขาหนึ่งของลุ่มน้ำตาปี
+            เพื่อพัฒนาเป็นแหล่งผลิตไฟฟ้าพลังน้ำขนาดใหญ่ในภาคใต้ เนื่องจากสภาพภูมิประเทศเป็นหุบเขาสลับซับซ้อน
+            จึงมีความเหมาะสมต่อการสร้างเขื่อนเก็บกักน้ำ
+          </p>
+        </div>
+        <div class="mb-4">
+          <span class="timeline-year">พ.ศ. 2525</span>
+          <h5>เริ่มลงมือก่อสร้าง</h5>
+          <p class="lead-th mb-0">
+            การก่อสร้างเขื่อนเริ่มขึ้นที่บ้านเชี่ยวหลาน ตำบลเขาพัง ภายใต้ชื่อโครงการว่า
+            <strong>“เขื่อนเชี่ยวหลาน”</strong> โดยมีชื่อเดิมตามชื่อหมู่บ้านที่ตั้งอยู่บริเวณปากลำน้ำ
+            พร้อมกันนี้ได้มีการสร้าง <strong>เขื่อนกั้นน้ำล้น (Saddle Dam) จำนวน 16 แห่ง</strong>
+            เพื่อปิดช่องเขาบริเวณไหล่เขาโดยรอบที่อ่างเก็บน้ำจะท่วมถึง
+          </p>
+        </div>
+        <div class="mb-4">
+          <span class="timeline-year">พ.ศ. 2529</span>
+          <h5>ก่อสร้างแล้วเสร็จ</h5>
+          <p class="lead-th mb-0">
+            เขื่อนและอาคารประกอบทั้งหมดก่อสร้างแล้วเสร็จ เริ่มทำการเก็บกักน้ำและทดสอบการเดินเครื่อง
+            โรงไฟฟ้าพลังน้ำเพื่อจ่ายกระแสไฟฟ้าเข้าสู่ระบบการไฟฟ้าฝ่ายผลิตแห่งประเทศไทย
+          </p>
+        </div>
+        <div class="mb-4">
+          <span class="timeline-year">22 กันยายน 2530</span>
+          <h5>พระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช เสด็จพระราชดำเนินเปิดเขื่อน</h5>
+          <p class="lead-th mb-0">
+            พระองค์ได้พระราชทานชื่อเขื่อนใหม่ว่า <strong>“รัชชประภา”</strong>
+            ซึ่งมีความหมายว่า <em>แสงสว่างแห่งราชอาณาจักร</em> (รัชช = ราชอาณาจักร, ประภา = แสงสว่าง)
+            นับตั้งแต่นั้นเป็นต้นมา เขื่อนแห่งนี้จึงมีชื่อเรียกสองชื่อ คือ ชื่อทางการว่าเขื่อนรัชชประภา
+            และชื่อที่ประชาชนคุ้นเคยว่าเขื่อนเชี่ยวหลาน
+          </p>
+        </div>
+        <div class="info-box">
+          <i class="bi bi-info-circle-fill text-warning"></i>
+          <strong>เกร็ดน่ารู้:</strong> บริเวณที่ถูกน้ำท่วมกลายเป็นอ่างเก็บน้ำนั้นเดิมเป็นป่าและชุมชน
+          รวมถึงแนวเส้นทางรถไฟสายคอคอดกระที่เคยวางแผนไว้ สภาพซากของแนวเส้นทางบางส่วน
+          จึงกลายเป็นแหล่งที่มาของตำนานท้องถิ่นและการศึกษาทางประวัติศาสตร์ในปัจจุบัน
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <figure class="thumb mb-3">
+          <img src="img/สันเขื่อน.webp" data-fb="ภาพอาคารเขื่อนและอ่างเก็บน้ำ" alt="บรรยากาศเขื่อนรัชชประภา">
+          <figcaption>สันเขื่อนและทัศนียภาพอ่างเก็บน้ำในเขตอุทยานแห่งชาติเขาสก</figcaption>
+        </figure>
+        <div class="card">
+          <div class="card-header"><i class="bi bi-diagram-3"></i> สรุปสาระสำคัญ</div>
+          <div class="card-body">
+            <table class="table table-sm table-bordered mb-0">
+              <tbody>
+                <tr><td>ชื่อเดิม</td><td>เขื่อนเชี่ยวหลาน</td></tr>
+                <tr><td>ชื่อพระราชทาน</td><td>เขื่อนรัชชประภา (แสงสว่างแห่งราชอาณาจักร)</td></tr>
+                <tr><td>ลำน้ำที่ปิดกั้น</td><td>คลองแสง (ลุ่มน้ำตาปี)</td></tr>
+                <tr><td>ที่ตั้ง</td><td>หมู่ 3 ต.เขาพัง อ.บ้านตาขุน จ.สุราษฎร์ธานี</td></tr>
+                <tr><td>เริ่มก่อสร้าง</td><td>พ.ศ. 2525</td></tr>
+                <tr><td>แล้วเสร็จ</td><td>พ.ศ. 2529 / เปิดเขื่อน 2530</td></tr>
+                <tr><td>หน่วยงาน</td><td>การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย (กฟผ.)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     หน้า 3 : ข้อมูลทางเทคนิค
+     ============================================================ -->
+<section class="page d-none" id="specs">
+  <div class="container section">
+    <h3 class="section-title">ข้อมูลทางเทคนิคของเขื่อน</h3>
+    <p class="lead-th">ข้อมูลต่อไปนี้เป็นรายละเอียดทางวิศวกรรมของตัวเขื่อนและโรงไฟฟ้าพลังน้ำ</p>
+
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <table class="table table-bordered table-striped align-middle">
+          <thead>
+            <tr><th style="width:48%">รายการ</th><th>รายละเอียด</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>ประเภทเขื่อน</td><td>เขื่อนหินถมแกนดินเหนียว (Rock-fill Dam with Clay Core)</td></tr>
+            <tr><td>ความสูงจากฐานราก</td><td>94 เมตร</td></tr>
+            <tr><td>ความยาวสันเขื่อน</td><td>761 เมตร</td></tr>
+            <tr><td>ความกว้างสันเขื่อน</td><td>ประมาณ 12 เมตร (ใช้เป็นเส้นทางสัญจรได้)</td></tr>
+            <tr><td>ความจุอ่างเก็บน้ำ (ระดับน้ำเก็บกักสูงสุด)</td><td>5,639 ล้านลูกบาศก์เมตร</td></tr>
+            <tr><td>พื้นที่ผิวน้ำที่ระดับเก็บกัก</td><td>ประมาณ 185 ตารางกิโลเมตร</td></tr>
+            <tr><td>เขื่อนกั้นน้ำล้น (Saddle Dam)</td><td>16 แห่ง</td></tr>
+            <tr><td>กำลังผลิตไฟฟ้า</td><td>240 เมกะวัตต์ (เครื่องกำเนิดไฟฟ้า 3 เครื่อง ๆ ละ 80 เมกะวัตต์)</td></tr>
+            <tr><td>ปริมาณพลังงานไฟฟ้าเฉลี่ย</td><td>ประมาณ 554 ล้านกิโลวัตต์-ชั่วโมงต่อปี</td></tr>
+            <tr><td>หน่วยงานเจ้าของโครงการ</td><td>การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย (กฟผ.)</td></tr>
+          </tbody>
+        </table>
+        <p class="small text-muted mb-0">* ตัวเลขบางรายการเป็นค่าประมาณการ ควรตรวจสอบกับเอกสารของ กฟผ. อีกครั้งก่อนอ้างอิงทางวิชาการ</p>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card mb-3">
+          <div class="card-header"><i class="bi bi-bar-chart-line"></i> สัดส่วนที่สำคัญ</div>
+          <div class="card-body">
+            <label class="small mb-1">กำลังผลิตไฟฟ้า 240 MW</label>
+            <div class="progress mb-3" style="height:12px"><div class="progress-bar bg-success" style="width:100%"></div></div>
+            <label class="small mb-1">ความจุอ่างเทียบเขื่อนขนาดใหญ่ภาคใต้</label>
+            <div class="progress mb-3" style="height:12px"><div class="progress-bar bg-info" style="width:86%"></div></div>
+            <label class="small mb-1">ระดับความสูงเขื่อน 94 เมตร</label>
+            <div class="progress" style="height:12px"><div class="progress-bar bg-secondary" style="width:72%"></div></div>
+          </div>
+        </div>
+
+        <div class="accordion" id="accSpec">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#a1">ระบบระบายน้ำและความปลอดภัย</button>
+            </h2>
+            <div id="a1" class="accordion-collapse collapse" data-bs-parent="#accSpec">
+              <div class="accordion-body small">
+                เขื่อนมีระบบระบายน้ำล้น (Spillway) และอาคารท้ายน้ำสำหรับระบายน้ำส่วนเกินในฤดูฝน
+                พร้อมระบบตรวจวัดการทรุดตัว การไหลซึมผ่านตัวเขื่อน และการเฝ้าระวังภัยจากฝ่ายควบคุมเขื่อนอย่างต่อเนื่อง
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#a2">โรงไฟฟ้าพลังน้ำ</button>
+            </h2>
+            <div id="a2" class="accordion-collapse collapse" data-bs-parent="#accSpec">
+              <div class="accordion-body small">
+                อาคารโรงไฟฟ้าได้รับน้ำจากอ่างเก็บน้ำผ่านท่อส่งน้ำ (Penstock) ไปยังกังหันน้ำ
+                เพื่อขับเครื่องกำเนิดไฟฟ้าจำนวน 3 เครื่อง รวมกำลังผลิต 240 เมกะวัตต์
+                และจ่ายไฟเข้าสู่ระบบโครงข่ายไฟฟ้าภาคใต้
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#a3">การดูแลรักษาอ่างเก็บน้ำ</button>
+            </h2>
+            <div id="a3" class="accordion-collapse collapse" data-bs-parent="#accSpec">
+              <div class="accordion-body small">
+                มีการตรวจสอบปริมาณตะกอน การเฝ้าระวังคุณภาพน้ำ และการควบคุมกิจกรรมทางน้ำ
+                รวมทั้งประสานงานกับอุทยานแห่งชาติเขาสกในการดูแลพื้นที่ที่มีสถานะเป็นพื้นที่อนุรักษ์
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     หน้า 4 : ประโยชน์และการใช้งาน
+     ============================================================ -->
+<section class="page d-none" id="benefits">
+  <div class="container section">
+    <h3 class="section-title">ประโยชน์และการใช้งาน</h3>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100"><div class="card-body">
+          <h5><i class="bi bi-lightning-charge text-warning"></i> ผลิตไฟฟ้าพลังน้ำ</h5>
+          <p class="small mb-0">เป็นแหล่งผลิตไฟฟ้าพลังงานสะอาดขนาด 240 เมกะวัตต์ ช่วยเสริมความมั่นคงของระบบไฟฟ้าภาคใต้
+            และลดการพึ่งพาเชื้อเพลิงฟอสซิล</p>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100"><div class="card-body">
+          <h5><i class="bi bi-droplet-half text-primary"></i> แหล่งน้ำต้นทุน</h5>
+          <p class="small mb-0">สนับสนุนการเกษตร การอุปโภค–บริโภค และการรักษาระดับน้ำในลุ่มน้ำตาปีตอนล่าง
+            โดยเฉพาะในฤดูแล้ง</p>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100"><div class="card-body">
+          <h5><i class="bi bi-shield-check text-success"></i> บรรเทาอุทกภัย</h5>
+          <p class="small mb-0">ช่วยตัดยอดน้ำหลากในฤดูฝน ลดความรุนแรงของน้ำท่วมในพื้นที่ตอนล่างของลุ่มน้ำ</p>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100"><div class="card-body">
+          <h5><i class="bi bi-water text-info"></i> แหล่งท่องเที่ยวและรายได้ท้องถิ่น</h5>
+          <p class="small mb-0">สร้างงานและรายได้ให้กับชุมชนรอบเขื่อน ทั้งธุรกิจแพที่พัก เรือนำเที่ยว ร้านอาหาร
+            และบริการนำเที่ยวทางธรรมชาติ</p>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100"><div class="card-body">
+          <h5><i class="bi bi-tree-fill text-success"></i> แหล่งศึกษาระบบนิเวศ</h5>
+          <p class="small mb-0">เป็นพื้นที่ศึกษาความหลากหลายทางชีวภาพของป่าดิบชื้นและป่าหินปูน ทั้งพืช สัตว์ นก และแมลง</p>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100"><div class="card-body">
+          <h5><i class="bi bi-people-fill text-secondary"></i> การประมงและอาชีพท้องถิ่น</h5>
+          <p class="small mb-0">พื้นที่อ่างเก็บน้ำบางส่วนใช้ทำการประมงของชาวบ้านในชุมชนรอบเขื่อน
+            ภายใต้กฎระเบียบของหน่วยงานที่เกี่ยวข้อง</p>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     หน้า 5 : การท่องเที่ยว
+     ============================================================ -->
+<section class="page d-none" id="tourism">
+  <div class="container section">
+    <h3 class="section-title">การท่องเที่ยว</h3>
+
+    <ul class="nav nav-tabs" id="tourTab" role="tablist">
+      <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#t1">จุดน่าสนใจ</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t2">กิจกรรม</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t3">การเดินทาง</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#t4">ข้อควรปฏิบัติ</button></li>
+    </ul>
+
+    <div class="tab-content border border-top-0 p-3 p-md-4">
+      <!-- จุดน่าสนใจ -->
+      <div class="tab-pane fade show active" id="t1">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h5>1. จุดชมวิวสันเขื่อน</h5>
+            <p class="small">บริเวณสันเขื่อนสามารถเดินชมหรือขับรถผ่านได้ มองเห็นผืนน้ำกว้างและเทือกเขาหินปูนเรียงราย
+              เป็นจุดถ่ายภาพยอดนิยมของนักท่องเที่ยว</p>
+          </div>
+          <div class="col-md-6">
+            <h5>2. เขาพิงกัน</h5>
+            <p class="small">ยอดเขาหินปูนกลางอ่างเก็บน้ำที่มีลักษณะเป็นก้อนหินขนาดใหญ่โน้มเข้าหากัน
+              เป็นสัญลักษณ์ของเขื่อนรัชชประภา</p>
+          </div>
+          <div class="col-md-6">
+            <h5>3. ถ้ำและหน้าผาหินปูน</h5>
+            <p class="small">บริเวณอ่างเก็บน้ำมีถ้ำและเพิงผาหินหลายแห่ง เช่น ถ้ำที่นักท่องเที่ยวนิยมเข้าชม
+              ด้วยเรือท้องแบนหรือเรือคายัค โดยต้องมีไกด์ท้องถิ่นนำทาง</p>
+          </div>
+          <div class="col-md-6">
+            <h5>4. ป่าและสัตว์ป่าในเขตอุทยานแห่งชาติเขาสก</h5>
+            <p class="small">พื้นที่ป่าดิบชื้นเป็นถิ่นอาศัยของสัตว์ป่านานาชนิด เช่น นกเงือก สมเสร็จ
+              และพืชหายากอย่างบัวผุด ซึ่งเป็นพืชเฉพาะถิ่นของภาคใต้</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- กิจกรรม -->
+      <div class="tab-pane fade" id="t2">
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4"><div class="info-box h-100"><strong>ล่องเรือชมทัศนียภาพ</strong><br><span class="small">เรือหางยาวและเรือท่องเที่ยวจากท่าเรือเขื่อน ใช้เวลาประมาณ 1–2 ชั่วโมง</span></div></div>
+          <div class="col-md-6 col-lg-4"><div class="info-box h-100"><strong>พักแรมในแพกลางน้ำ</strong><br><span class="small">แพที่พักให้บริการทั้งแบบห้องพักรวมและห้องพักส่วนตัว พร้อมอาหารกลางวัน–เย็น</span></div></div>
+          <div class="col-md-6 col-lg-4"><div class="info-box h-100"><strong>พายเรือคายัค</strong><br><span class="small">สำรวจผืนน้ำและลำคลองเล็ก ๆ รอบอ่างเก็บน้ำ เหมาะกับผู้ที่ว่ายน้ำเป็น</span></div></div>
+          <div class="col-md-6 col-lg-4"><div class="info-box h-100"><strong>เดินป่าศึกษาธรรมชาติ</strong><br><span class="small">เส้นทางเดินป่าระยะสั้น–ยาวในเขตอุทยานแห่งชาติเขาสก โดยมีเจ้าหน้าที่นำทาง</span></div></div>
+          <div class="col-md-6 col-lg-4"><div class="info-box h-100"><strong>ชมพระอาทิตย์ขึ้น–ตกกลางอ่างเก็บน้ำ</strong><br><span class="small">ช่วงเช้าจะมีหมอกลอยเหนือน้ำ เป็นช่วงเวลาที่นักท่องเที่ยวนิยมถ่ายภาพมากที่สุด</span></div></div>
+          <div class="col-md-6 col-lg-4"><div class="info-box h-100"><strong>ดูนกและถ่ายภาพธรรมชาต</strong><br><span class="small">นกเงือกและนกน้ำหลายชนิดพบได้บริเวณริมฝั่งและป่าชายน้ำ</span></div></div>
+        </div>
+      </div>
+
+      <!-- การเดินทาง -->
+      <div class="tab-pane fade" id="t3">
+        <ol class="small">
+          <li>จากตัวเมืองสุราษฎร์ธานี ใช้ทางหลวงหมายเลข 401 (สายสุราษฎร์ธานี–ตะกั่วป่า) มุ่งหน้าอำเภอบ้านตาขุน</li>
+          <li>เมื่อถึงบริเวณบ้านตาขุน ให้แยกเข้าสู่เส้นทางหลวงหมายเลข 415 เพื่อเข้าไปยังท่าเรือเขื่อนรัชชประภา</li>
+          <li>ระยะทางรวมจากตัวเมืองประมาณ 90 กิโลเมตร ใช้เวลาขับรถประมาณ 1 ชั่วโมง 30 นาที</li>
+          <li>บริเวณท่าเรือมีบริการเรือรับจ้างและบริษัทท่องเที่ยวให้บริการล่องเรือเข้าสู่แพที่พัก</li>
+          <li>นักท่องเที่ยวที่มาจากกรุงเทพฯ สามารถนั่งเครื่องบินมาลงสนามบินสุราษฎร์ธานี แล้วต่อรถเช่าหรือรถโดยสาร</li>
+        </ol>
+        <div class="alert alert-warning small mb-0">
+          <i class="bi bi-exclamation-triangle"></i> ควรตรวจสอบเส้นทางและเวลาทำการของท่าเรือล่วงหน้า
+          โดยเฉพาะช่วงฤดูฝนที่คลื่นลมและระดับน้ำในอ่างอาจเปลี่ยนแปลง
+        </div>
+      </div>
+
+      <!-- ข้อควรปฏิบัติ -->
+      <div class="tab-pane fade" id="t4">
+        <ul class="small">
+          <li>ปฏิบัติตามคำแนะนำของเจ้าหน้าที่เขื่อนและเจ้าหน้าที่อุทยานอย่างเคร่งครัด</li>
+          <li>ไม่ทิ้งขยะลงในอ่างเก็บน้ำและลำคลอง เนื่องจากเป็นแหล่งน้ำเพื่อการอุปโภคและเป็นพื้นที่อนุรักษ์</li>
+          <li>สวมเสื้อชูชีพทุกครั้งเมื่ออยู่บนเรือหรือทำกิจกรรมทางน้ำ</li>
+          <li>ไม่ส่งเสียงดังรบกวนสัตว์ป่า และไม่เก็บหรือนำพืช–สัตว์ออกจากพื้นที่</li>
+          <li>งดนำภาชนะโฟมและถุงพลาสติกแบบใช้ครั้งเดียวเข้าพื้นที่</li>
+          <li>กรณีนำโดรนเข้ามาถ่ายภาพ ต้องขออนุญาตจากหน่วยงานที่เกี่ยวข้องก่อน</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row g-3 mt-4">
+      <div class="col-md-4"><figure class="thumb mb-0"><img src="img/แพที่พัก.webp" data-fb="ภาพแพที่พักกลางอ่างเก็บน้ำ"><figcaption>แพที่พักกลางอ่างเก็บน้ำ</figcaption></figure></div>
+      <div class="col-md-4"><figure class="thumb mb-0"><img src="img/เขาหินปูน.jpeg" data-fb="ภาพเขาหินปูนกลางน้ำ"><figcaption>ทิวเขาหินปูนกลางผืนน้ำ</figcaption></figure></div>
+      <div class="col-md-4"><figure class="thumb mb-0"><img src="img/เรือ.jpg" data-fb="ภาพเรือท่องเที่ยวในอ่างเก็บน้ำ"><figcaption>เรือรับจ้างพานักท่องเที่ยวเข้าสู่แพ</figcaption></figure></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     หน้า 6 : แผนที่  (แก้ไขเป็น Google Maps)
+     ============================================================ -->
+<section class="page d-none" id="map">
+  <div class="container section">
+    <h3 class="section-title">แผนที่และจุดสำคัญ</h3>
+    <p class="lead-th">
+      แผนที่ด้านล่างใช้ <strong>Google Maps</strong> แสดงตำแหน่งจุดสำคัญของเขื่อนรัชชประภา (เขื่อนเชี่ยวหลาน)
+      สามารถซูมเข้า–ออก เลื่อนแผนที่ สลับมุมมอง <em>แผนที่ถนน / ภาพถ่ายดาวเทียม</em> และคลิกที่หมุดตัวเลข
+      เพื่อดูรายละเอียดได้ โดยในหน้าต่างรายละเอียดจะมีลิงก์ <em>“นำทางด้วย Google Maps”</em> สำหรับเปิดเส้นทาง
+    </p>
+
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+          <span class="legend"><i class="bi bi-geo-alt-fill text-danger"></i> หมุดจุดสำคัญ · คลิกเพื่อดูรายละเอียด</span>
+          <div>
+            <button class="btn btn-sm btn-outline-secondary" id="btnSatellite"><i class="bi bi-globe2"></i> สลับแผนที่/ดาวเทียม</button>
+            <button class="btn btn-sm btn-outline-secondary" id="btnFullscreen"><i class="bi bi-arrows-fullscreen"></i> ขยายแผนที่</button>
+          </div>
+        </div>
+        <div id="map"></div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header"><i class="bi bi-list-ul"></i> รายการจุดปักหมุด</div>
+          <ul class="list-group list-group-flush pin-list" id="pinList">
+            <li class="list-group-item text-muted small">กำลังโหลดแผนที่...</li>
+          </ul>
+        </div>
+        <div class="info-box mt-3 small">
+          <strong>หมายเหตุ:</strong> พิกัดของจุดท่องเที่ยวกลางอ่างเก็บน้ำเป็นค่าประมาณจากแผนที่สาธารณะ
+          เพื่อใช้ประกอบการศึกษา ไม่ใช่พิกัดอย่างเป็นทางการของหน่วยงาน
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     หน้า 7 : รูปภาพ
+     ============================================================ -->
+<section class="page d-none" id="gallery">
+  <div class="container section">
+    <h3 class="section-title">รูปภาพ</h3>
+    <p class="lead-th">คลิกภาพ </p>
+
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-4"><figure class="thumb gallery-item mb-0" data-bs-toggle="modal" data-bs-target="#lightbox" data-src="images/01-dam-hero.jpg" data-cap="สันเขื่อนรัชชประภา"><img src="img/รัช.jpg" data-fb="สันเขื่อนรัชชประภา"><figcaption>สันเขื่อนรัชชประภา</figcaption></figure></div>
+      <div class="col-md-6 col-lg-4"><figure class="thumb gallery-item mb-0" data-bs-toggle="modal" data-bs-target="#lightbox" data-src="images/03-raft.jpg" data-cap="แพที่พักกลางน้ำ"><img src="img/ที่พัก2.jpg" data-fb="แพที่พักกลางน้ำ"><figcaption>แพที่พักกลางน้ำ</figcaption></figure></div>
+      <div class="col-md-6 col-lg-4"><figure class="thumb gallery-item mb-0" data-bs-toggle="modal" data-bs-target="#lightbox" data-src="images/04-karst.jpg" data-cap="เขาหินปูนกลางอ่างเก็บน้ำ"><img src="img/เขา2.jpg" data-fb="เขาหินปูนกลางอ่างเก็บน้ำ"><figcaption>เขาหินปูนกลางอ่างเก็บน้ำ</figcaption></figure></div>
+      <div class="col-md-6 col-lg-4"><figure class="thumb gallery-item mb-0" data-bs-toggle="modal" data-bs-target="#lightbox" data-src="images/05-boat.jpg" data-cap="เรือนำเที่ยวในอ่างเก็บน้ำ"><img src="img/เรือ2.jpg" data-fb="เรือนำเที่ยวในอ่างเก็บน้ำ"><figcaption>เรือนำเที่ยวในอ่างเก็บน้ำ</figcaption></figure></div>
+      <div class="col-md-6 col-lg-4"><figure class="thumb gallery-item mb-0" data-bs-toggle="modal" data-bs-target="#lightbox" data-src="images/06-sunrise.jpg" data-cap="หมอกยามเช้าเหนือผืนน้ำ"><img src="img/หมอก.jpg" data-fb="หมอกยามเช้าเหนือผืนน้ำ"><figcaption>หมอกยามเช้าเหนือผืนน้ำ</figcaption></figure></div>
+      <div class="col-md-6 col-lg-4"><figure class="thumb gallery-item mb-0" data-bs-toggle="modal" data-bs-target="#lightbox" data-src="images/07-view.jpg" data-cap="จุดชมวิวสันเขื่อน"><img src="img/จุดชมวิว.jpg" data-fb="จุดชมวิวสันเขื่อน"><figcaption>จุดชมวิวสันเขื่อน</figcaption></figure></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     หน้า 8 : อ้างอิง
+     ============================================================ -->
+<section class="page d-none" id="references">
+  <div class="container section">
+    <h3 class="section-title">เอกสารและแหล่งอ้างอิง</h3>
+    <ol class="small">
+      <li>วิกิพีเดีย สารานุกรมเสรี. <em>เขื่อนรัชชประภา</em>. สืบค้นจาก <a href="https://th.wikipedia.org/wiki/เขื่อนรัชชประภา" target="_blank" rel="noopener">th.wikipedia.org</a></li>
+      <li>องค์การบริหารส่วนจังหวัดสุราษฎร์ธานี. <em>เขื่อนรัชชประภา (เขื่อนเชี่ยวหลาน)</em>. สืบค้นจาก <a href="https://www.suratpao.go.th/travel/detail/41" target="_blank" rel="noopener">suratpao.go.th</a></li>
+      <li>การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย (กฟผ.). ข้อมูลเขื่อนและโรงไฟฟ้าพลังน้ำ. <a href="https://www.egat.co.th" target="_blank" rel="noopener">egat.co.th</a></li>
+      <li>อุทยานแห่งชาติเขาสก กรมอุทยานแห่งชาติ สัตว์ป่า และพันธุ์พืช. ข้อมูลพื้นที่อนุรักษ์และแหล่งท่องเที่ยว</li>
+      <li>Chieolan Holiday. <em>ข้อมูลเขื่อนเชี่ยวหลาน</em>. <a href="https://www.chieolanholiday.com/chieolan-dam-info/" target="_blank" rel="noopener">chieolanholiday.com</a></li>
+      <li>KKday Blog (2568). <em>แนะนำ 5 แลนด์มาร์ก เขื่อนเชี่ยวหลาน</em>. <a href="https://www.kkday.com/th/blog/20747/" target="_blank" rel="noopener">kkday.com</a></li>
+      <li>Google Maps Platform (ข้อมูลแผนที่ แผนที่ถนน และภาพถ่ายดาวเทียม)</li>
+    </ol>
+    <div class="alert alert-secondary small mb-0">
+      ข้อมูลในเว็บไซต์นี้รวบรวมเพื่อใช้ประกอบการศึกษาเท่านั้น
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     หน้า 9 : ผู้จัดทำ
+     ============================================================ -->
+<section class="page d-none" id="credits">
+  <div class="container section">
+    <h3 class="section-title">เกี่ยวกับผู้จัดทำ</h3>
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <table class="table table-bordered credit-table align-middle mb-3">
+          <tbody>
+            <tr><td>ชื่อ–นามสกุลผู้จัดทำ</td><td>นางสาวภูนีษา มะดงแซ<span class="text-muted small"></span></td></tr>
+            <tr><td>รหัสนักศึกษา</td><td>6820210714</td></tr>
+            <tr><td>คณะ</td><td>คณะมนุษยศาสตร์และสังคมศาสตร์ <span class="text-muted small"></span></td></tr>
+            <tr><td>สาขาวิชา</td><td>สาขาวิชาภูมิศาสตร์ <span class="text-muted small"></span></td></tr>
+            <tr><td>มหาวิทยาลัย</td><td>มหาวิทยาลัยสงขลานครินทร์ (ม.อ.) วิทยาเขตปัตตานี</td></tr>
+            <tr><td>อาจารย์ผู้สอน</td><td>ผศ.วุฒิพงษ์ แสงมณี</td></tr>
+            <tr><td>รายวิชา</td><td>Computer for Geographer</td></tr>
+            <tr><td>ภาคการศึกษา / ปีการศึกษา</td><td>1/2569</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-5">
+        <div class="card mb-3">
+          <div class="card-header">วัตถุประสงค์ของเว็บไซต์</div>
+          <div class="card-body small mb-0">
+            <ul class="mb-0">
+              <li>เพื่อศึกษาความเป็นมาของเขื่อนรัชชประภา และการพัฒนาแหล่งน้ำขนาดใหญ่ในภาคใต้</li>
+              <li>เพื่อฝึกทักษะการจัดทำเว็บไซต์ด้วย HTML, CSS, JavaScript และ Bootstrap 5</li>
+              <li>เพื่อนำเสนอข้อมูลด้านการท่องเที่ยวของจังหวัดสุราษฎร์ธานี</li>
+              <li>เพื่อฝึกใช้เครื่องมือแผนที่บนเว็บในการระบุพิกัดและตำแหน่งสำคัญ</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">ช่องทางติดต่อผู้จัดทำ</div>
+          <div class="card-body small">
+            <p class="mb-1"><i class="bi bi-envelope"></i> อีเมล: puneesamadonsae@gmail.com</p>
+            <p class="mb-0"><i class="bi bi-telephone"></i> โทรศัพท์: 0935840751</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ ส่วนท้าย : สารบัญเว็บไซต์ ============ -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h5>เกี่ยวกับเว็บไซต์นี้</h5>
+        <p class="small mb-2">
+          เว็บไซต์นี้จัดทำขึ้นเพื่อประกอบการเรียนการสอน เนื้อหาเกี่ยวกับเขื่อนรัชชประภา (เขื่อนเชี่ยวหลาน)
+          จังหวัดสุราษฎร์ธานี โดยรวบรวมจากแหล่งข้อมูลสาธารณะและเอกสารของหน่วยงานที่เกี่ยวข้อง
+        </p>
+        <p class="small mb-0"><i class="bi bi-geo-alt"></i> หมู่ที่ 3 ตำบลเขาพัง อำเภอบ้านตาขุน จังหวัดสุราษฎร์ธานี 84230</p>
+      </div>
+
+      <div class="col-6 col-lg-4 sitemap-links">
+        <h5>สารบัญเว็บไซต์</h5>
+        <div class="row">
+          <div class="col-6">
+            <a href="#/home" data-page="home">หน้าแรก</a>
+            <a href="#/history" data-page="history">ประวัติความเป็นมา</a>
+            <a href="#/specs" data-page="specs">ข้อมูลทางเทคนิค</a>
+            <a href="#/benefits" data-page="benefits">ประโยชน์และการใช้งาน</a>
+          </div>
+          <div class="col-6">
+            <a href="#/tourism" data-page="tourism">การท่องเที่ยว</a>
+            <a href="#/map" data-page="map">แผนที่และจุดสำคัญ</a>
+            <a href="#/gallery" data-page="gallery">รูปภาพ</a>
+            <a href="#/references" data-page="references">เอกสารอ้างอิง</a>
+            <a href="#/credits" data-page="credits">เกี่ยวกับผู้จัดทำ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <h5>หน่วยงาน / ลิงก์ภายนอก</h5>
+        <a href="https://www.egat.co.th" target="_blank" rel="noopener">การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย (กฟผ.)</a><br>
+        <a href="https://www.dnp.go.th" target="_blank" rel="noopener">กรมอุทยานแห่งชาติ สัตว์ป่า และพันธุ์พืช</a><br>
+        <a href="https://www.suratpao.go.th" target="_blank" rel="noopener">องค์การบริหารส่วนจังหวัดสุราษฎร์ธานี</a><br>
+        <a href="https://www.tourismthailand.org" target="_blank" rel="noopener">การท่องเที่ยวแห่งประเทศไทย (ททท.)</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+      เขื่อนรัชชประภา (เขื่อนเชี่ยวหลาน)  จัดทำโดย นางสาวภูนีษา มะดงแซ  6820210714
+      อาจารย์ประจำรายวิชา : ผศ.วุฒิพงษ์ แสงมณี  มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตปัตตานี คณะมนุษยศาสตร์และสังคมศาสตร์ สาขาวิชาภูมิศาสตร์<br>
+      © 2569 ใช้เพื่อการศึกษาเท่านั้น
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" class="btn btn-success" title="กลับขึ้นด้านบน"><i class="bi bi-arrow-up"></i></button>
+
+<!-- Modal ขยายภาพ -->
+<div class="modal fade" id="lightbox" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="lbCap">ภาพประกอบ</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center p-0">
+        <img id="lbImg" src="" alt="" style="width:100%;height:auto">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ สคริปต์ ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+<!-- Google Maps JavaScript API (ใส่ API Key ของผู้จัดทำ) -->
+<script>
+  window.GMAPS_KEY = "AIzaSyC5l0aPyGFqiqY5DpqOYf-8YhN_eYHHobU";
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5l0aPyGFqiqY5DpqOYf-8YhN_eYHHobU&language=th&region=TH&v=weekly" defer></script>
+
+<script>
+/* =========================================================
+   1) ระบบเปลี่ยนหน้า (Single Page ด้วย hash)
+   ========================================================= */
+const PAGE_TITLE = {
+  home:'ภาพรวม', history:'ประวัติความเป็นมา', specs:'ข้อมูลทางเทคนิค',
+  benefits:'ประโยชน์และการใช้งาน', tourism:'การท่องเที่ยว', map:'แผนที่และจุดสำคัญ',
+  gallery:'แกลเลอรีภาพ', references:'เอกสารอ้างอิง', credits:'เกี่ยวกับผู้จัดทำ'
+};
+
+function showPage(id){
+  if(!PAGE_TITLE[id]) id = 'home';
+  document.querySelectorAll('.page').forEach(function(sec){
+    sec.classList.toggle('d-none', sec.id !== id);
+  });
+  document.querySelectorAll('.main-nav .nav-link').forEach(function(a){
+    if(a.dataset.page) a.classList.toggle('active', a.dataset.page === id);
+  });
+  document.querySelectorAll('.dropdown-item[data-page]').forEach(function(a){
+    if(a.dataset.page === id){
+      const parent = a.closest('.nav-item').querySelector('.nav-link');
+      parent.classList.add('active');
+    }
+  });
+  document.getElementById('crumbNow').textContent = PAGE_TITLE[id];
+  document.title = PAGE_TITLE[id] + ' | เขื่อนรัชชประภา (เขื่อนเชี่ยวหลาน)';
+  document.getElementById('mainMenu').classList.remove('show');
+  window.scrollTo({top:0, behavior:'smooth'});
+  if(id === 'map') ensureMap();          // สร้าง/ย่อ-ขยายแผนที่เมื่อเข้าหน้านี้
+  if(id === 'home') runCounters();
+}
+
+window.addEventListener('hashchange', function(){
+  showPage(location.hash.replace('#/',''));
+});
+
+/* =========================================================
+   2) ตัวเลขสถิติวิ่ง (หน้าแรก)
+   ========================================================= */
+function runCounters(){
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    const target = parseInt(el.dataset.count,10);
+    let cur = 0, step = Math.max(1, Math.round(target/60));
+    clearInterval(el._t);
+    el._t = setInterval(function(){
+      cur += step;
+      if(cur >= target){ cur = target; clearInterval(el._t); }
+      el.textContent = cur.toLocaleString('th-TH');
+    }, 22);
+  });
+}
+
+/* =========================================================
+   3) ภาพสำรอง (ถ้ายังไม่มีไฟล์รูปในโฟลเดอร์ images)
+   ========================================================= */
+function fallbackSVG(label){
+  const svg =
+    "<svg xmlns='http://www.w3.org/2000/svg' width='800' height='500'>" +
+    "<rect width='100%' height='100%' fill='#dbe7e4'/>" +
+    "<circle cx='640' cy='110' r='46' fill='#f0d49b'/>" +
+    "<path d='M0 370 L190 205 L325 335 L470 175 L800 395 L800 500 L0 500Z' fill='#9dbfb6'/>" +
+    "<path d='M0 430 L260 320 L430 420 L800 330 L800 500 L0 500Z' fill='#7ba79c'/>" +
+    "<text x='400' y='470' text-anchor='middle' font-family='sans-serif' font-size='26' fill='#3f5f58'>" +
+    label + "</text></svg>";
+  return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+}
+document.querySelectorAll('img[data-fb]').forEach(function(img){
+  img.addEventListener('error', function(){
+    if(img.dataset.done) return;
+    img.dataset.done = '1';
+    img.src = fallbackSVG(img.dataset.fb || 'ภาพประกอบ');
+  });
+  if(img.complete && img.naturalWidth === 0){
+    img.src = fallbackSVG(img.dataset.fb || 'ภาพประกอบ');
+  }
+});
+
+/* =========================================================
+   4) Modal ขยายภาพ
+   ========================================================= */
+const lbEl = document.getElementById('lightbox');
+if(lbEl){
+  lbEl.addEventListener('show.bs.modal', function(ev){
+    const fig = ev.relatedTarget;
+    if(!fig) return;
+    const img = fig.querySelector('img');
+    document.getElementById('lbImg').src = fig.dataset.src || (img ? img.src : '');
+    document.getElementById('lbCap').textContent = fig.dataset.cap || 'ภาพประกอบ';
+  });
+}
+
+/* =========================================================
+   5) แผนที่ Google Maps + หมุดจุดสำคัญ
+   ========================================================= */
+const PINS = [
+  {
+    n:1, name:'เขื่อนรัชชประภา (สันเขื่อน)', lat:8.96667, lng:98.78333,
+    detail:'ตัวเขื่อนหินถมแกนดินเหนียว ความสูง 94 เมตร ยาว 761 เมตร เป็นจุดชมวิวและถ่ายภาพหลักของพื้นที่',
+    tag:'เขื่อน'
+  },
+  {
+    n:2, name:'ท่าเรือเขื่อนรัชชประภา', lat:8.96840, lng:98.77910,
+    detail:'จุดขึ้น–ลงเรือสำหรับนักท่องเที่ยวที่เดินทางเข้าสู่แพพักกลางอ่างเก็บน้ำ (พิกัดประมาณ)',
+    tag:'ท่าเรือ'
+  },
+  {
+    n:3, name:'เขตแพพักกลางอ่างเก็บน้ำ', lat:8.94500, lng:98.72500,
+    detail:'บริเวณที่มีแพที่พักและกิจกรรมทางน้ำกระจายอยู่หลายแห่ง ใช้เวลาเดินทางด้วยเรือจากท่าเรือประมาณ 1 ชั่วโมง (พิกัดประมาณ)',
+    tag:'ที่พัก'
+  },
+  {
+    n:4, name:'จุดชมวิวเขาหินปูนกลางน้ำ (เขาสามเกลอ)', lat:8.97500, lng:98.71500,
+    detail:'บริเวณทิวเขาหินปูนที่โผล่พ้นผืนน้ำ คล้ายทัศนียภาพกุ้ยหลินของจีน (พิกัดประมาณ)',
+    tag:'จุดชมวิว'
+  },
+  {
+    n:5, name:'อุทยานแห่งชาติเขาสก (ที่ทำการ)', lat:8.91560, lng:98.53190,
+    detail:'ที่ทำการอุทยานแห่งชาติเขาสก อำเภอพนม ทางเข้าฝั่งบกของพื้นที่ป่าเดียวกัน ใช้เป็นจุดเริ่มเดินป่าและศึกษาธรรมชาติ',
+    tag:'อุทยาน'
+  }
+];
+
+const MAP_CENTER = { lat: 8.9580, lng: 98.7300 };
+let damMap = null;
+let gInfoWindow = null;
+let gMarkers = [];
+
+/* ---- หมุดแบบกำหนดเอง (SVG) มีเลขกำกับ ---- */
+function pinIcon(n){
+  const svg =
+    "<svg xmlns='http://www.w3.org/2000/svg' width='36' height='48' viewBox='0 0 36 48'>" +
+      "<path d='M18 46.5C18 46.5 33.5 28 33.5 17.8A15.5 15.5 0 1 0 2.5 17.8C2.5 28 18 46.5 18 46.5Z' " +
+        "fill='#c0392b' stroke='#ffffff' stroke-width='2.5'/>" +
+      "<circle cx='18' cy='17.5' r='8.6' fill='#ffffff' opacity='0.95'/>" +
+      "<text x='18' y='22.5' text-anchor='middle' font-family='Sarabun,Tahoma,sans-serif' " +
+        "font-size='15' font-weight='700' fill='#c0392b'>" + n + "</text>" +
+    "</svg>";
+  return {
+    url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg),
+    scaledSize: new google.maps.Size(36, 48),
+    anchor: new google.maps.Point(18, 48)
+  };
+}
+
+function popupHTML(p){
+  return (
+    '<div style="min-width:240px;max-width:280px;font-family:Sarabun,Tahoma,sans-serif">' +
+      '<strong style="color:#0f3d5c;font-size:1rem">' + p.n + '. ' + p.name + '</strong>' +
+      '<div style="font-size:.85rem;margin:6px 0;color:#3c4d56;line-height:1.6">' + p.detail + '</div>' +
+      '<div style="font-size:.76rem;color:#7a8a92">พิกัด: ' + p.lat.toFixed(5) + ', ' + p.lng.toFixed(5) + '</div>' +
+      '<div style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap">' +
+        '<a target="_blank" rel="noopener" style="font-size:.82rem;color:#12796b;font-weight:600" ' +
+          'href="https://www.google.com/maps/dir/?api=1&destination=' + p.lat + ',' + p.lng + '">นำทางด้วย Google Maps &rarr;</a>' +
+        '<a target="_blank" rel="noopener" style="font-size:.82rem;color:#12796b;font-weight:600" ' +
+          'href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + p.lat + ',' + p.lng + '">ดูภาพถนน</a>' +
+      '</div>' +
+    '</div>'
+  );
+}
+
+/* ---- สร้างแผนที่ครั้งแรก (เรียกตอนเปิดหน้า #/map เท่านั้น) ---- */
+function ensureMap(){
+  const el = document.getElementById('map');
+  if(!el || damMap) return;
+
+  // ยังโหลด Google Maps API ไม่เสร็จ / โหลดไม่สำเร็จ
+  if(typeof google === 'undefined' || !google.maps){
+    el.innerHTML =
+      '<div class="map-fallback">' +
+        '<div><i class="bi bi-cloud-slash" style="font-size:2rem;color:#b3c2c9"></i><br>' +
+        'กำลังโหลดแผนที่... หากไม่แสดงผลภายใน 10 วินาที กรุณาตรวจสอบการเชื่อมต่ออินเทอร์เน็ต ' +
+        'หรือ API Key ของ Google Maps</div>' +
+      '</div>';
+    setTimeout(function(){
+      // ลองอีกครั้งเมื่อโหลดสคริปต์เสร็จแล้ว
+      if(typeof google !== 'undefined' && google.maps && !damMap){
+        el.innerHTML = '';
+        ensureMap();
+      }
+    }, 1200);
+    return;
+  }
+
+  damMap = new google.maps.Map(el, {
+    center: MAP_CENTER,
+    zoom: 11,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+      position: google.maps.ControlPosition.TOP_RIGHT,
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE]
+    },
+    zoomControl: true,
+    streetViewControl: true,
+    fullscreenControl: false,
+    gestureHandling: 'greedy',      // ลากแผนที่ได้ด้วยนิ้วเดียวบนมือถือ
+    clickableIcons: true
+  });
+
+  gInfoWindow = new google.maps.InfoWindow();
+
+  const list = document.getElementById('pinList');
+  list.innerHTML = '';
+
+  PINS.forEach(function(p){
+    const mk = new google.maps.Marker({
+      position: { lat: p.lat, lng: p.lng },
+      map: damMap,
+      title: p.n + '. ' + p.name,
+      icon: pinIcon(p.n),
+      animation: google.maps.Animation.DROP
+    });
+
+    mk.addListener('click', function(){
+      gInfoWindow.setContent(popupHTML(p));
+      gInfoWindow.open({ map: damMap, anchor: mk });
+      damMap.panTo({ lat: p.lat, lng: p.lng });
+    });
+
+    gMarkers.push({ pin:p, marker:mk });
+
+    // รายการด้านข้าง คลิกแล้วเลื่อนแผนที่ไปหาหมุด
+    const li = document.createElement('li');
+    li.className = 'list-group-item d-flex justify-content-between align-items-center';
+    li.innerHTML = '<span><span class="badge badge-soft rounded-pill me-2">' + p.n + '</span>' + p.name + '</span>' +
+                   '<i class="bi bi-crosshair text-muted"></i>';
+    li.addEventListener('click', function(){
+      const pos = { lat: p.lat, lng: p.lng };
+      damMap.setZoom(14);
+      damMap.panTo(pos);
+      gInfoWindow.setContent(popupHTML(p));
+      gInfoWindow.open({ map: damMap, anchor: mk });
+    });
+    list.appendChild(li);
+  });
+
+  // ปุ่มสลับ แผนที่ถนน / ภาพถ่ายดาวเทียม
+  const btnSat = document.getElementById('btnSatellite');
+  if(btnSat){
+    btnSat.addEventListener('click', function(){
+      damMap.setMapTypeId(
+        damMap.getMapTypeId() === 'satellite'
+          ? google.maps.MapTypeId.ROADMAP
+          : google.maps.MapTypeId.SATELLITE
+      );
+    });
+  }
+
+  // จัดกึ่งกลางให้เห็นหมุดทุกจุดโดยอัตโนมัติ
+  const bounds = new google.maps.LatLngBounds();
+  PINS.forEach(function(p){ bounds.extend({ lat:p.lat, lng:p.lng }); });
+  damMap.fitBounds(bounds, { top:40, right:40, bottom:40, left:40 });
+
+  setTimeout(function(){
+    google.maps.event.trigger(damMap, 'resize');
+  }, 300);
+}
+
+/* ปุ่มขยายแผนที่เต็มจอ */
+document.getElementById('btnFullscreen').addEventListener('click', function(){
+  const el = document.getElementById('map');
+  if(!document.fullscreenElement){
+    if(el.requestFullscreen) el.requestFullscreen().catch(function(){});
+    else if(el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+  }else{
+    if(document.exitFullscreen) document.exitFullscreen();
+  }
+  setTimeout(function(){ if(damMap) google.maps.event.trigger(damMap, 'resize'); }, 400);
+});
+document.addEventListener('fullscreenchange', function(){
+  if(damMap) google.maps.event.trigger(damMap, 'resize');
+});
+
+/* แสดงข้อความไทยชัดเจน ถ้า API Key ถูกปฏิเสธ (ยังไม่เปิดบิลลิ่ง / Key ผิด) */
+window.gm_authFailure = function(){
+  const el = document.getElementById('map');
+  if(el){
+    el.innerHTML =
+      '<div class="map-fallback"><div><i class="bi bi-exclamation-triangle" style="font-size:2rem;color:#c0392b"></i><br>' +
+      '<strong>ไม่สามารถแสดงแผนที่ได้</strong><br>' +
+      'API Key ของ Google Maps ถูกปฏิเสธ กรุณาตรวจสอบว่ากระบวนการชำระเงิน (Billing) ของโปรเจกต์เปิดใช้งานแล้ว ' +
+      'และเปิด Maps JavaScript API ไว้</div></div>';
+  }
+};
+
+/* =========================================================
+   6) ช่องค้นหาในเว็บไซต์
+   ========================================================= */
+const SEARCH_INDEX = Object.keys(PAGE_TITLE).map(function(k){
+  return { page:k, title:PAGE_TITLE[k], text:(PAGE_TITLE[k] + ' ' + k) };
+}).concat([
+  { page:'history', title:'ชื่อเดิมของเขื่อน (เขื่อนเชี่ยวหลาน)', text:'เชี่ยวหลาน ชื่อเดิม พระราชทาน รัชชประภา' },
+  { page:'specs',   title:'ความจุอ่างเก็บน้ำ 5,639 ล้าน ลบ.ม.', text:'ความจุ อ่างเก็บน้ำ 5,639 ล้านลูกบาศก์เมตร' },
+  { page:'specs',   title:'กำลังผลิตไฟฟ้า 240 เมกะวัตต์', text:'ไฟฟ้า 240 MW กำลังผลิต' },
+  { page:'tourism', title:'การเดินทางไปเขื่อนรัชชประภา', text:'เดินทาง เส้นทาง 401 415 บ้านตาขุน' },
+  { page:'map',     title:'พิกัดและแผนที่จุดสำคัญ', text:'แผนที่ พิกัด หมุด GPS google maps' },
+  { page:'credits', title:'ผู้จัดทำและอาจารย์ที่ปรึกษา', text:'ผู้จัดทำ อาจารย์ มหาวิทยาลัย รหัสนักศึกษา' }
+]);
+
+const sInput = document.getElementById('searchInput');
+const sBox   = document.getElementById('searchResult');
+
+sInput.addEventListener('input', function(){
+  const q = sInput.value.trim().toLowerCase();
+  if(q.length < 2){ sBox.style.display = 'none'; return; }
+  const hits = SEARCH_INDEX.filter(function(it){
+    return it.title.toLowerCase().includes(q) || it.text.toLowerCase().includes(q);
+  }).slice(0,6);
+  if(!hits.length){
+    sBox.innerHTML = '<div class="p-2 text-muted small">ไม่พบข้อมูลที่ค้นหา</div>';
+  }else{
+    sBox.innerHTML = hits.map(function(h){
+      return '<a href="#/' + h.page + '"><i class="bi bi-file-earmark-text me-2"></i>' + h.title + '</a>';
+    }).join('');
+  }
+  sBox.style.display = 'block';
+});
+
+sBox.addEventListener('click', function(e){
+  if(e.target.closest('a')){ sBox.style.display='none'; sInput.value=''; }
+});
+document.addEventListener('click', function(e){
+  if(!e.target.closest('.search-box') && !e.target.closest('#searchResult')) sBox.style.display='none';
+});
+
+/* ปุ่มกลับขึ้นด้านบน */
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', function(){
+  toTop.style.display = window.scrollY > 380 ? 'block' : 'none';
+});
+toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+/* ตัวนับผู้เข้าชม (แบบง่าย เก็บใน localStorage ของเครื่อง) */
+(function(){
+  let v = parseInt(localStorage.getItem('dam_visits') || '0', 10) + 1;
+  localStorage.setItem('dam_visits', v);
+  const el = document.getElementById('visitCount');
+  if(el) el.textContent = (1024 + v).toLocaleString('th-TH');
+})();
+
+/* =========================================================
+   7) เริ่มต้นการทำงาน
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', function(){
+  const start = location.hash.replace('#/','') || 'home';
+  showPage(start);
+  if(start === 'map') ensureMap();
+});
+</script>
+</body>
+</html>
+</body>
+</html>
